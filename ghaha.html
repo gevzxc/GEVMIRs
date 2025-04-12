@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>JG WebWave Innovations</title>
+<link rel="icon" href="logo.jpeg" type="image/png">
+<script src="https://kit.fontawesome.com/edcced4a53.js" crossorigin="anonymous"></script>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+
+    html, body {
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    background: url('https://image.slidesdocs.com/responsive-images/background/data-technology-blue-abstract-business-glow-powerpoint-background_e667bfafcb__960_540.jpg') no-repeat center center fixed;
+    background-size: cover;
+    animation: fadeIn 1s ease-in;
+    }
+
+    @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+    }
+
+    header {
+    background: linear-gradient(135deg, #081125, #0c1b3a);
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    }
+
+    header img {
+    max-height: 60px;
+    }
+
+    header h1 {
+    font-size: 36px;
+    font-weight: 700;
+    animation: fadeIn 1.5s ease;
+    }
+
+    nav {
+    display: flex;
+    justify-content: center;
+    background-color: #102450;
+    padding: 10px;
+    }
+
+    nav a {
+    text-decoration: none;
+    color: #f0f0f0;
+    margin: 0 15px;
+    font-size: 18px;
+    font-weight: 500;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    padding: 10px 20px;
+    border-radius: 5px;
+    }
+
+    nav a:hover {
+    background-color: #272e38;
+    transform: scale(1.05);
+    }
+
+    #showcase {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    background: url('https://image.slidesdocs.com/responsive-images/background/data-technology-blue-abstract-business-glow-powerpoint-background_e667bfafcb__960_540.jpg') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+
+    #showcase .overlay {
+    background: rgba(0, 0, 0, 0.6);
+    color: #f5f5f5;
+    padding: 40px;
+    text-align: center;
+    border-radius: 10px;
+    animation: fadeIn 1.5s ease;
+    }
+
+    #showcase h2 {
+    font-size: 36px;
+    margin-bottom: 15px;
+    }
+
+    #showcase p {
+    font-size: 18px;
+    }
+
+    .main-content,
+    .skills,
+    .projects,
+    .contact {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    padding: 40px;
+    margin: 40px auto;
+    max-width: 1000px;
+    color: #111;
+    animation: fadeIn 1.3s ease;
+    }
+
+    .skills h2,
+    .projects h2,
+    .contact h2 {
+    font-size: 26px;
+    text-align: center;
+    margin-bottom: 30px;
+    }
+
+    .skills-container,
+    .projects-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    }
+
+    .skill, .project {
+    background-color: #fff;
+    margin: 15px;
+    padding: 20px;
+    width: 250px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .skill:hover, .project:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .skill img, .project img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 15px;
+    }
+
+    .skill h3, .project h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    }
+
+    .skill p, .project p {
+    font-size: 16px;
+    color: #666;
+    }
+
+    .contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+    width: 320px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    background-color: #fff;
+    color: #222;
+    }
+
+    .contact-form button {
+    width: 340px;
+    padding: 12px;
+    background-color: #0044cc;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    }
+
+    .contact-form button:hover {
+    background-color: #0055cc;
+    }
+
+    footer {
+    background-color: #003366;
+    color: #f0f0f0;
+    padding: 25px;
+    text-align: center;
+    }
+
+    footer p {
+    font-size: 16px;
+    margin: 8px 0;
+    }
+
+    footer a {
+    color: white;
+    margin: 0 10px;
+    font-size: 20px;
+    transition: color 0.3s ease;
+    }
+
+    footer a:hover {
+    color: #00aced;
+    }
+
+    @media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+    }
+
+    header div {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .skills-container,
+    .projects-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .skill,
+    .project,
+    .contact-form input,
+    .contact-form textarea,
+    .contact-form button {
+        width: 90%;
+    }
+
+    #showcase {
+        height: 300px;
+    }
+
+    #showcase h2 {
+        font-size: 28px;
+    }
+
+    #showcase p {
+        font-size: 16px;
+    }
+    }
+    @keyframes slideInUp {
+from {
+opacity: 0;
+transform: translateY(40px);
+}
+to {
+opacity: 1;
+transform: translateY(0);
+}
+}
+
+/* Add animation to these sections */
+.skills, .projects, .contact {
+animation: slideInUp 1s ease-in-out;
+}
+
+/* Background color tweaks for better section separation */
+.skills {
+background: hsl(240, 7%, 97%); /* Light blue */
+}
+
+.projects {
+    background: hsl(0, 0%, 99%); /* Light blue */
+}
+
+.contact {
+    background: hsl(0, 0%, 98%); /* Light blue */
+}
+
+/* Add animation delays for individual items (optional but cool) */
+.skill, .project {
+animation: slideInUp 0.8s ease forwards;
+}
+@keyframes fadeInUp {
+from {
+opacity: 0;
+transform: translateY(50px);
+}
+to {
+opacity: 1;
+transform: translateY(0);
+}
+}
+
+@keyframes hoverScale {
+from {
+transform: scale(1);
+}
+to {
+transform: scale(1.1);
+}
+}
+
+/* Animations on page load */
+body {
+animation: fadeInUp 1s ease-in-out;
+}
+
+/* Navigation link hover effect */
+nav a {
+transition: all 0.3s ease;
+}
+
+nav a:hover {
+background-color: #0055cc;
+transform: scale(1.1);
+text-decoration: underline;
+}
+
+/* Showcase text fade-in */
+#showcase .overlay {
+animation: fadeInUp 1.5s ease-in-out;
+}
+
+/* Skills Section: Fade-in effect */
+.skills, .projects, .contact {
+opacity: 0;
+animation: fadeInUp 1s ease-out forwards;
+}
+
+/* Project and Skill Cards Hover */
+.skill, .project {
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill:hover, .project:hover {
+transform: translateY(-10px);
+box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+animation: hoverScale 0.3s forwards;
+}
+
+/* Smooth Scroll */
+html {
+scroll-behavior: smooth;
+}
+
+/* Animation for the Contact Form */
+.contact-form input,
+.contact-form textarea,
+.contact-form button {
+animation: fadeInUp 0.8s ease-out forwards;
+}
+.skill, .project {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+}
+.about {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 10px;
+  padding: 40px;
+  margin: 40px auto;
+  max-width: 1000px;
+  color: #111;
+  text-align: center;
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+.about h2 {
+  font-size: 28px;
+  margin-bottom: 30px;
+}
+
+.about-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.about-frame {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  width: 250px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: slideInUp 0.8s ease forwards;
+}
+
+.about-frame img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+
+.about-frame h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.about-frame p {
+  font-size: 16px;
+  color: #666;
+}
+
+.about-frame:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+}
+
+</style>
+</head>
+<body>
+<header>
+    <div class="header-container">
+    <img src="jg.jpg" alt="Logo" class="logo">
+    <h1>JG WebWave Innovations</h1>
+    </div>
+</header>
+
+<nav>
+    <a href="#home">Home</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+    <a href="#about">About us</a>
+
+</nav>
+
+<section id="showcase">
+    <div class="overlay">
+    <h2>Build Bold. Innovate Smart.</h2>
+    <p>Your vision meets our code — let’s create something great.</p>
+    </div>
+</section>
+
+<div class="skills" id="skills">
+    <h2>Our Skills</h2>
+    <div class="skills-container">
+        <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank" class="skill">
+          <img src="htmll.jpg" alt="HTML">
+          <h3>HTML</h3>
+          <p>Expert in crafting semantic and accessible HTML structures.</p>
+        </a>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank" class="skill">
+            <img src="css.jpg" alt="CSS">
+            <h3>CSS</h3>
+            <p>Proficient in designing responsive and visually appealing layouts.</p>
+          </a>
+  
+          <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" class="skill">
+            <img src="js1.jpg" alt="JavaScript">
+            <h3>JavaScript</h3>
+            <p>Skilled in developing interactive and dynamic web applications.</p>
+          </a>
+      </div>
+    </div>
+  </div>
+  
+  <div class="projects" id="projects">
+    <h2>Our Projects</h2>
+    <div class="projects-container">
+        <a href="https://en.wikipedia.org/wiki/Teleperformance" target="_blank" class="project">
+          <img src="tp.jpg" alt="Project 1">
+          <h3>Project One</h3>
+          <p>A web application that streamlines business processes.</p>
+        </a>
+  
+        <a href="https://en.wikipedia.org/wiki/Shopee" target="_blank" class="project">
+            <img src="shopee.jpg" alt="Project 2">
+            <h3>Project Two</h3>
+            <p>An e-commerce platform with a user-friendly interface.</p>
+          </a>
+        
+          <a href="https://en.wikipedia.org/wiki/Canva" target="_blank" class="project">
+            <img src="canva.jpg" alt="Project 3">
+            <h3>Project Three</h3>
+            <p>A portfolio website showcasing creative designs.</p>
+          </a>
+      </div>
+  </div>
+  
+<div class="contact" id="contact">
+    <h2>Contact Us</h2>
+    <form class="contact-form">
+    <input type="text" placeholder="Your Name" required>
+    <input type="email" placeholder="Your Email" required>
+    <textarea rows="5" placeholder="Your Message" required></textarea>
+    <button type="submit">Send Message</button>
+    </form>
+</div>
+<div class="about" id="about">
+    <h2>About Us</h2>
+    <div class="about-container">
+      <div class="about-frame">
+        <img src="gev.jpg" alt="Gevirick">
+        <h3>Gevirick Cabilao</h3>
+        <p>Frontend Developer who turns ideas into beautiful, responsive websites with pixel-perfect design and smooth interactivity.</p>
+      </div>  
+      <div class="about-frame">
+        <img src="jamir.jpg" alt="Jamir">
+        <h3>Jamir Bayrante</h3>
+        <p>Backend Developer crafting secure, scalable server-side systems with a focus on performance and clean architecture.</p>
+      </div>
+    </div>
+  </div>
+  
+
+<footer>
+    <p>&copy; 2025 JG WebWave Innovations. Crafted with 💙 by Gevirick & Jamir.</p>
+    <p>
+    <a href="https://github.com/gevzxc" target="_blank"><i class="fa-brands fa-github"></i></a>
+    <a href="https://www.facebook.com/gevirick.cabilao.5" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+    <a href="https://www.facebook.com/jamir.bayrante.1" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+    </p>
+</footer>
+</body>
+</html>
