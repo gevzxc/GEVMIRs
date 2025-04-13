@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>JG WebWave Innovations</title>
-<link rel="icon" href="logo.jpeg" type="image/png">
-<script src="https://kit.fontawesome.com/edcced4a53.js" crossorigin="anonymous"></script>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
     * {
     margin: 0;
@@ -414,6 +413,118 @@ animation: fadeInUp 0.8s ease-out forwards;
   transform: translateY(-5px);
   box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
 }
+.project-overview {
+  background-color: #f4f4f4;
+  padding: 50px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+  border-radius: 10px;
+  animation: fadeInUp 1s ease-out;
+}
+
+.project-overview h2 {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.project-overview .overview-text {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 40px;
+  font-size: 16px;
+  color: #444;
+}
+
+.wireframe-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.wireframe-box {
+  background: white;
+  border: 2px dashed #ccc;
+  width: 280px;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease;
+}
+
+.wireframe-box:hover {
+  transform: translateY(-5px);
+}
+
+.wire-header {
+  background: #e0e0e0;
+  height: 40px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.wire-body {
+  padding: 20px;
+}
+
+.wire-image {
+  height: 120px;
+  background: #ccc;
+  margin-bottom: 15px;
+  border-radius: 6px;
+}
+
+.wire-body h3 {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.wire-body p {
+  font-size: 15px;
+  color: #666;
+}
+.skill, .project, .about-frame, .wireframe-box {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+#showcase .overlay {
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,0.2);
+}
+.skill:hover, .project:hover, .about-frame:hover, .wireframe-box:hover {
+  box-shadow: 0 12px 25px rgba(0, 120, 255, 0.2), 0 0 10px rgba(0, 120, 255, 0.3);
+}
+.contact-form button:hover {
+  animation: pulse 0.7s infinite alternate;
+}
+
+@keyframes pulse {
+  from { transform: scale(1); }
+  to { transform: scale(1.05); }
+}
+.skill:nth-child(1), .project:nth-child(1) { animation-delay: 0.3s; }
+.skill:nth-child(2), .project:nth-child(2) { animation-delay: 0.5s; }
+.skill:nth-child(3), .project:nth-child(3) { animation-delay: 0.7s; }
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0c1b3a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #0055cc;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #007aff;
+}
+
+
 
 </style>
 </head>
@@ -431,7 +542,6 @@ animation: fadeInUp 0.8s ease-out forwards;
     <a href="#projects">Projects</a>
     <a href="#contact">Contact</a>
     <a href="#about">About us</a>
-
 </nav>
 
 <section id="showcase">
@@ -461,7 +571,6 @@ animation: fadeInUp 0.8s ease-out forwards;
             <p>Skilled in developing interactive and dynamic web applications.</p>
           </a>
       </div>
-    </div>
   </div>
   
   <div class="projects" id="projects">
@@ -512,7 +621,10 @@ animation: fadeInUp 0.8s ease-out forwards;
     </div>
   </div>
   
-
+  
+      </div>
+    </div>
+  </div>
 <footer>
     <p>&copy; 2025 JG WebWave Innovations. Crafted with 💙 by Gevirick & Jamir.</p>
     <p>
@@ -521,5 +633,10 @@ animation: fadeInUp 0.8s ease-out forwards;
     <a href="https://www.facebook.com/jamir.bayrante.1" target="_blank"><i class="fa-brands fa-facebook"></i></a>
     </p>
 </footer>
+<button onclick="window.scrollTo({top: 0, behavior: 'smooth'});" 
+        style="position: fixed; bottom: 20px; right: 20px; background: #0055cc; color: #fff; border: none; border-radius: 50%; width: 50px; height: 50px; font-size: 22px; cursor: pointer; box-shadow: 0 4px 10px rgba(0,0,0,0.2);">
+↑
+</button>
+
 </body>
 </html>
